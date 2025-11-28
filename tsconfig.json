@@ -10,8 +10,12 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   },
-  "include": ["src", "api"],
-  "exclude": ["node_modules", "dist", "pages"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "pages", "server"]
 }

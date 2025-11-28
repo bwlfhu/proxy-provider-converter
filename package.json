@@ -5,7 +5,14 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "server:dev": "node --watch server/index.js",
+    "build:all": "npm run build && npm run build:server",
+    "build:server": "echo '后端是 ES 模块，无需构建，直接部署源码即可'",
+    "tsc": "tsc",
+    "deploy:docker:build": "docker build -t proxy-provider-converter .",
+    "deploy:docker:run": "docker run -p 80:80 -p 3001:3001 proxy-provider-converter"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -15,7 +22,9 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^19.2.0",
     "react-hot-toast": "^2.6.0",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.16",
